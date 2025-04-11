@@ -1,8 +1,4 @@
 import * as React from "react"
-import {
-  IconUsers,
-} from "@tabler/icons-react"
-
 import { NavMain } from "@/components/nav-main"
 import { NavUser } from "@/components/nav-user"
 import {
@@ -22,6 +18,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { CiCloudOn } from "react-icons/ci";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import { LiaLanguageSolid } from "react-icons/lia";
+import Link from "next/link"
 
 const data = {
   user: {
@@ -73,9 +70,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5 hover:bg-[#202020]"
             >
-              <a href="/user/dashboard">
+              <Link href="/user/dashboard">
                 <Image  src={logo} alt="logo"  width={150} height={150}/>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
