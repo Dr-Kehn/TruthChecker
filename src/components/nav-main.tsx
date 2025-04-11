@@ -1,12 +1,12 @@
-import { IconCirclePlusFilled, IconMail, type Icon } from "@tabler/icons-react";
-import { Button } from "@/components/ui/button";
+import { IconMail, type Icon } from "@tabler/icons-react";
+
 import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar";
+} from "../components/ui/sidebar";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
