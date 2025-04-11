@@ -46,7 +46,7 @@ export const Accordion = () => {
         aria-labelledby="accordion-collapse-heading-1"
       >
         <div className="accordion-panel">
-          <p className="accordion-text">TruthCheck is a decentralized fact-checking platform where the community verifies claims using collective evidence, transparent voting, and web3 technology. It's designed to combat misinformation by empowering users to validate facts together.</p>
+          <p className="accordion-text">TruthCheck is a decentralized fact-checking platform where the community verifies claims using collective evidence, transparent voting, and web3 technology. It&apos;s designed to combat misinformation by empowering users to validate facts together.</p>
           
         </div>
       </div>
