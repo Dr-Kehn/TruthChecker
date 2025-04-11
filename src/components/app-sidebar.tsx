@@ -65,7 +65,7 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="offcanvas" {...props} className="bg-[#202020] ">
+    <Sidebar collapsible="offcanvas" {...props} className="bg-[#202020]">
       <SidebarHeader className="bg-[#202020]">
         <SidebarMenu className="bg-[#202020]">
           <SidebarMenuItem className="bg-[#202020]">
@@ -73,7 +73,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5 hover:bg-[#202020]"
             >
-              <a href="#">
+              <a href="/user/dashboard">
                 <Image  src={logo} alt="logo"  width={150} height={150}/>
               </a>
             </SidebarMenuButton>
