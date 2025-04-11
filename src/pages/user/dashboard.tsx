@@ -22,7 +22,7 @@ export default function Page() {
     >
       <AppSidebar variant="inset" />
       <SidebarInset className=" p-0 m-0">
-        <SiteHeader />
+        <SiteHeader title="Dashboard" />
 
         {/* dashboard section */}
 
