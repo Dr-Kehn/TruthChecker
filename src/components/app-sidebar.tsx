@@ -33,7 +33,7 @@ const data = {
     },
     {
       title: "Submit Claims",
-      url: "#",
+      url: "/user/submit-claim",
       icon: () => <LuFileUp />,
     },
     {
@@ -48,7 +48,7 @@ const data = {
     },
     {
       title: "Help",
-      url: "#",
+      url: "/user/help",
       icon: () => <IoIosHelpCircleOutline />,
     },
     {

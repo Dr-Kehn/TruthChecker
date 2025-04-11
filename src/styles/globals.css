@@ -134,3 +134,274 @@ a {
     @apply bg-background text-foreground;
   }
 }
+
+.claim-box-container {
+ display: flex;
+ justify-content: center; 
+ margin: 20vh; 
+ border: black soild 2px;
+}
+
+.claim-box {
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: clamp(1rem,  2.5vw, 1.2rem) 
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-field {
+  width: 80%;
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+
+.help-page {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #1a1a1a;
+
+}
+
+.help-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.help-header h1 {
+  font-size: 1.875rem;
+  font-weight: 700; 
+}
+
+
+/* FAQ Section */
+
+.faq-section {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.faq-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem; 
+}
+
+
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.faq-item button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #1a1a1a;
+
+}
+
+.faq-item button h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.faq-answer {
+  margin-top: 0.5rem;
+  transition-property: all;
+  transition-duration: 300ms;
+}
+
+/* Collasped State */
+.faq-answer[aria-expanded="true"] {
+  opacity: 1;
+  max-height: 24rem;
+}
+
+.faq-answer p {
+  color: #4b5563; /* text-gray-600 */
+  line-height: 1.5;
+}
+
+
+.faq-answer {
+  transition:
+   opacity 300ms ease,
+   max-height 300ms ease;
+}
+
+
+
+
+/* Main accordion container */
+.accordion-collapse {
+  font-family: 'Inter', sans-serif;
+  color: #111827;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .accordion-collapse {
+    color: #f3f4f6;
+  }
+}
+
+/* Accordion button styles */
+.accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.25rem;
+  font-weight: 500;
+  text-align: left;
+  color: #6b7280;
+  background-color: transparent;
+  border: 1px solid #e5e7eb;
+  border-bottom: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* First item rounded corners */
+.accordion-collapse > h2:first-child .accordion-button {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+/* Last item rounded corners and border */
+.accordion-collapse > h2:last-child .accordion-button {
+  border-bottom: 1px solid #e5e7eb;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+/* Button hover state */
+.accordion-button:hover {
+  background-color: #f9fafb;
+}
+
+/* Button focus state */
+.accordion-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(209, 213, 219, 0.5);
+}
+
+/* Icon styles */
+.accordion-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.accordion-icon.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Content area */
+.accordion-content {
+  border: 1px solid #e5e7eb;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.accordion-content.hidden {
+  display: none;
+}
+
+/* Panel padding */
+.accordion-panel {
+  padding: 1.25rem;
+}
+
+/* Text styles */
+.accordion-text {
+  margin-bottom: 0.5rem;
+  color: #6b7280;
+}
+
+/* List styles */
+.accordion-list {
+  padding-left: 1.25rem;
+  list-style-type: disc;
+  color: #6b7280;
+}
+
+/* Link styles */
+.accordion-link {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.accordion-link:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode styles 
+@media (prefers-color-scheme: dark) {
+  .accordion-button {
+    color: #9ca3af;
+    border-color: #374151;
+    background-color: transparent;
+  }
+
+  .accordion-button:hover {
+    background-color: #1f2937;
+  }
+
+  .accordion-button:focus {
+    box-shadow: 0 0 0 4px rgba(55, 65, 81, 0.5);
+  }
+
+  .accordion-content {
+    border-color: #374151;
+    background-color: #111827;
+  }
+
+  .accordion-text,
+  .accordion-list {
+    color: #9ca3af;
+  }
+
+  .accordion-link {
+    color: #60a5fa;
+  }
+}
+*/
