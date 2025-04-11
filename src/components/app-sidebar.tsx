@@ -33,32 +33,32 @@ const data = {
     {
       title: "Dashboard",
       url: "/user/dashboard",
-      icon: MdOutlineDashboard,
+      icon: () => <MdOutlineDashboard />,
     },
     {
       title: "Submit Claims",
       url: "#",
-      icon: LuFileUp,
+      icon: () => <LuFileUp />,
     },
     {
       title: "Explore Claims",
       url: "#",
-      icon: IoSearchOutline,
+      icon: () => <IoSearchOutline />,
     },
     {
       title: "Public Review",
       url: "#",
-      icon: CiCloudOn,
+      icon: () => <CiCloudOn />,
     },
     {
       title: "Help",
       url: "#",
-      icon: IoIosHelpCircleOutline,
+      icon: () => <IoIosHelpCircleOutline />,
     },
     {
       title: "Language",
       url: "#",
-      icon: LiaLanguageSolid,
+      icon: () => <LiaLanguageSolid />,
     },
   ],
 }
