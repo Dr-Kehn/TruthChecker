@@ -32,7 +32,7 @@ const data = {
       icon: () => <MdOutlineDashboard />,
     },
     {
-      title: "Submit Claims",
+      title: "Instant Check",
       url: "/user/submit-claim",
       icon: () => <LuFileUp />,
     },
