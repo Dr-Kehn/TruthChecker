@@ -10,7 +10,7 @@ import {
   SidebarMenuItem,
 } from "../components/ui/sidebar"
 import Image from "next/image"
-import logo from "@/assets/truth-check-logo.svg"
+import logo from "../assets/truth-check-logo.svg"
 import { LuFileUp } from "react-icons/lu";
 import { MdOutlineDashboard } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";

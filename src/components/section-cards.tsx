@@ -4,10 +4,10 @@ import {
   CardTitle,
 } from "../components/ui/card";
 import Image from "next/image";
-import blue from "@/assets/blue.svg";
-import red from "@/assets/red.svg";
-import green from "@/assets/green.svg";
-import orange from "@/assets/orange.svg";
+import blue from "../assets/blue.svg";
+import red from "../assets/red.svg";
+import green from "../assets/green.svg";
+import orange from "../assets/orange.svg";
 
 export function SectionCards() {
   return (
