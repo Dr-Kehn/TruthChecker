@@ -53,7 +53,7 @@ export default function Home() {
 
         {/* Magnifying glass image */}
         <img
-          src="/assets/magnifying-glass.png"
+          src="../assets/magnifying-glass.png"
           alt="Magnifying glass"
           className="w-48 h-48 object-contain"
         />
