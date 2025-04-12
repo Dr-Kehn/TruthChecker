@@ -183,7 +183,7 @@ a {
   margin: 0 auto;
   padding: 1.5rem;
   min-height: 100vh;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   color: #1a1a1a;
 
 }
@@ -230,7 +230,6 @@ a {
   color: #6b7280;
   background-color: transparent;
   border: 1px solid #e5e7eb;
-  border-bottom: 0;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
