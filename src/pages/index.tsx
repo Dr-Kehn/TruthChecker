@@ -1,14 +1,30 @@
 "use client";
 import Link from "next/link";
 import ConnectWallet from "../components/WalletConnect";
+import Image from "next/image";
+import glass from '../assets/image/glass.png'
+import logo from '../assets/logo.svg'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#1e004e] to-[#180144] text-white font-sans">
+    <main className="h-[100vh] overflow-y-hidden bg-gradient-to-br from-[#1e004e] to-[#180144] text-white font-sans">
+      <div className="md:hidden block">
+        <ConnectWallet />
+      </div>
+
       {/* Navbar */}
-      <header className="flex items-center justify-between px-10 py-6">
-        <div className="text-2xl font-bold">TruthCheck</div>
-        <nav className="space-x-6 hidden md:flex">
+      <header className="flex items-center justify-center md:justify-between  px-10 py-6">
+        <section className="text-2xl font-bold">
+          <Image
+            src={logo}
+            alt="Logo"
+            width={150}
+            height={150}
+            className="w-[200px] md:w-[150px]"
+          />
+        </section>
+
+        <nav className="gap-10 hidden md:flex">
           <Link href="/" className="text-[#43ffa3] font-medium">
             Home
           </Link>
@@ -31,7 +47,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center px-4 py-16">
+      <section className="flex flex-col gap-5 items-center justify-center text-center px-4 py-10 ">
         <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#a8ffc4] mb-4">
           Not Sure If It’s <br className="hidden md:block" /> True? Check It
           Here
@@ -40,23 +56,24 @@ export default function Home() {
           Your tool for verifying claims and spotting misinformation.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center w-full max-w-xl gap-2 mb-12">
-          <input
-            type="text"
-            placeholder="Enter claim or Paste the URL here"
-            className="flex-1 rounded-full px-6 py-3 text-black placeholder-gray-500 focus:outline-none"
+        <div className="flex flex-col  justify-center items-center w-full max-w-xl gap-2 mb-12">
+          <Link
+            href={"/user/dashboard"}
+            className="bg-gradient-to-r w-[60%] from-[#43ffa3] to-[#1dd75b] text-black font-semibold px-6 py-3 rounded-full hover:opacity-90 transition"
+          >
+            Get Started
+          </Link>
+
+          <Image
+            src={glass}
+            alt={"Magnifying Glass"}
+            className="w-[250px] md:w-[200px] md:pt-10 pt-10  "
+            width={200}
+            height={200}
           />
-          <button className="bg-gradient-to-r from-[#43ffa3] to-[#1dd75b] text-black font-semibold px-6 py-3 rounded-full hover:opacity-90 transition">
-            Verify
-          </button>
         </div>
 
         {/* Magnifying glass image */}
-        <img
-          src="../assets/magnifying-glass.png"
-          alt="Magnifying glass"
-          className="w-48 h-48 object-contain"
-        />
       </section>
     </main>
   );
