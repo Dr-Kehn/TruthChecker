@@ -6,9 +6,9 @@ export const FlagText = () => {
   return (
     <div className="flag-text">
       <h1>No Flag Claims made</h1>
-      <p className="border ">
-        Claim Not Found. We couldn't find this claim in our database. Click the
-        button below to flag a claim{" "}
+      <p className="">
+        {`Claim Not Found. We couldn't find this claim in our database. Click the
+        button below to flag a claim`}
       </p>
       <button
         onClick={() => router.push("/user/create-claim")}
