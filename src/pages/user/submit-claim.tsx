@@ -11,6 +11,7 @@ import { abi } from "../../lib/constants";
 import { toast } from "react-toastify";
 import { FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
+import { baseSepolia } from "viem/chains";
 
 const SubmitClaim: React.FC = () => {
   const [content, setContent] = useState("");
@@ -53,7 +54,8 @@ const SubmitClaim: React.FC = () => {
         abi,
         functionName: "submitContent",
         args: [content],
-        account: address
+        account: address,
+        chain: baseSepolia,
       });
 
       setContent("");
@@ -104,7 +106,7 @@ const SubmitClaim: React.FC = () => {
                       className="text-blue-600 hover:underline flex items-center gap-2"
                     >
                       {hash.slice(0, 5)}...{hash.slice(-8)}
-                    <FiExternalLink className="cursor-pointer" />
+                      <FiExternalLink className="cursor-pointer" />
                     </a>
                   </div>
                 )}
@@ -151,6 +153,8 @@ const SubmitClaim: React.FC = () => {
                       src={typeof primary === "string" ? primary : primary.src}
                       alt="Submit"
                       className="h-14 w-13 flex cursor-pointer"
+                      width={40}
+                      height={40}
                     />
                   )}
                 </button>

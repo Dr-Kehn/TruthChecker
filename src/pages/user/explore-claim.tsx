@@ -14,6 +14,7 @@ import { useReadContract, useAccount, useWriteContract } from "wagmi";
 import { abi } from "../../lib/constants";
 import { contractAddress } from "../../lib/contract";
 import { toast } from "react-toastify";
+import { baseSepolia } from "viem/chains";
 
 export default function Page() {
   const [total, setTotal] = useState(0);
@@ -83,7 +84,8 @@ export default function Page() {
         abi,
         functionName: "vote",
         args: [BigInt(id), vote],
-        account: address
+        account: address,
+        chain: baseSepolia
       });
 
       if (hash) {
