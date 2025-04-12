@@ -1,8 +1,8 @@
 import React from 'react'
 import { AppSidebar } from "../../components/app-sidebar"
-import { SiteHeader2 } from "../../components/site-header2"
 import { SidebarInset, SidebarProvider } from "../../components/ui/sidebar"
 import { ClaimBox } from "../../components/claim-box"
+import { SiteHeader } from '../../components/site-header'
 
 
 
@@ -20,7 +20,7 @@ const SubmitClaim: React.FC = () => {
     >
         <AppSidebar  variant="inset"/>
         <SidebarInset className=" p-0 m-0" >
-            <SiteHeader2 title="Instant Claims "/>
+            <SiteHeader title="Instant Claims "/>
 
             <ClaimBox />
         </SidebarInset>

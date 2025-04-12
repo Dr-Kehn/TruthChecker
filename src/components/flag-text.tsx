@@ -12,7 +12,8 @@ export const FlagText = () => {
       </p>
       <button
         onClick={() => router.push("/user/create-claim")}
-        className="flag-button">
+        className="bg-[#1E90FF] text-white hover:bg-[#1E90FF] w-fit mx-auto cursor-pointer border-none rounded-md px-4 py-2 mt-4"
+        >
         Submit Claim
       </button>
     </div>

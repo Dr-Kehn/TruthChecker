@@ -1,9 +1,9 @@
 import React from "react";
 import { AppSidebar } from "../../components/app-sidebar";
-import { SiteHeader2 } from "../../components/site-header2";
 import { SidebarInset, SidebarProvider } from "../../components/ui/sidebar";
 import { HelpHeader } from "../../components/help-header";
 import { Accordion } from "../../components/accordion";
+import { SiteHeader } from "../../components/site-header";
 
 const Help: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const Help: React.FC = () => {
     >
       <AppSidebar variant="inset" />
       <SidebarInset className=" p-0 m-0">
-        <SiteHeader2 title="Help" />
+        <SiteHeader title="Help" />
 
         <div className="help-page">
           <HelpHeader />

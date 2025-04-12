@@ -4,13 +4,17 @@ import { FlagText } from "./flag-text";
 
 export const FlagImg = () => {
   return (
-    <div className="w-full md:w-1/2 p-4 flag-cont  ">
-      <img
-        src={typeof flagg === "string" ? flagg : flagg.src}
-        className=" items-center object-contain  flex"
-      />
+    <div className="flex flex-1 flex-col bg-[#141414] text-white px-4 py-4">
+      <div className="m-6">
+        <div className=" mx-auto text-center flex flex-col justify-center items-center">
+          <img
+            src={typeof flagg === "string" ? flagg : flagg.src}
+            className=" items-center object-contain  flex"
+          />
 
-      <FlagText />
+          <FlagText />
+        </div>
+      </div>
     </div>
   );
 };
