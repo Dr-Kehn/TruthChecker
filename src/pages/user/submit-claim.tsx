@@ -53,6 +53,7 @@ const SubmitClaim: React.FC = () => {
         abi,
         functionName: "submitContent",
         args: [content],
+        account: address
       });
 
       setContent("");

@@ -83,6 +83,7 @@ export default function Page() {
         abi,
         functionName: "vote",
         args: [BigInt(id), vote],
+        account: address
       });
 
       if (hash) {
