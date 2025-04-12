@@ -42,8 +42,8 @@ const data = {
       icon: () => <IoSearchOutline />,
     },
     {
-      title: "Public Review",
-      url: "#",
+      title: "Flag Claim",
+      url: "/user/flag-claim",
       icon: () => <CiCloudOn />,
     },
     {

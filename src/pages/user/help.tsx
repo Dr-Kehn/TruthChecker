@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { AppSidebar } from "../../components/app-sidebar";
-import { SiteHeader } from "../../components/site-header";
 import { SidebarInset, SidebarProvider } from "../../components/ui/sidebar";
 import { HelpHeader } from "../../components/help-header";
 import { Accordion } from "../../components/accordion";
+import { SiteHeader } from "../../components/site-header";
 
 const Help: React.FC = () => {
   return (
