@@ -2,8 +2,8 @@
 import Link from "next/link";
 import ConnectWallet from "../components/WalletConnect";
 import Image from "next/image";
-import glass from '../assets/image/glass.png'
-import logo from '../assets/logo.svg'
+import glass from "../assets/image/glass.png";
+import logo from "../assets/logo.svg";
 
 export default function Home() {
   return (
@@ -47,7 +47,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="flex flex-col gap-5 items-center justify-center text-center px-4 py-10 ">
+      <section className="flex flex-col gap-5 items-center relative justify-center text-center px-4 py-10 ">
         <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#a8ffc4] mb-4">
           Not Sure If It’s <br className="hidden md:block" /> True? Check It
           Here
@@ -64,13 +64,15 @@ export default function Home() {
             Get Started
           </Link>
 
+          <div className="flex justify-center items-center pt-20 h-fit w-full text-center">
           <Image
             src={glass}
             alt={"Magnifying Glass"}
-            className="w-[250px] md:w-[200px] md:pt-10 pt-10  "
-            width={200}
-            height={200}
+            className=" ml-25 "
+            width={500}
+            height={500}
           />
+          </div>
         </div>
 
         {/* Magnifying glass image */}
