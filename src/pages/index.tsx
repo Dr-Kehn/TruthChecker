@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import ConnectWallet from "../components/WalletConnect";
 
 export default function Home() {
@@ -8,18 +9,18 @@ export default function Home() {
       <header className="flex items-center justify-between px-10 py-6">
         <div className="text-2xl font-bold">TruthCheck</div>
         <nav className="space-x-6 hidden md:flex">
-          <a href="/" className="text-[#43ffa3] font-medium">
+          <Link  href="/" className="text-[#43ffa3] font-medium">
             Home
-          </a>
-          <a href="#" className="hover:text-[#43ffa3] transition">
+          </Link>
+          <Link href="#" className="hover:text-[#43ffa3] transition">
             Trending
-          </a>
-          <a href="#" className="hover:text-[#43ffa3] transition">
+          </Link>
+          <Link href="#" className="hover:text-[#43ffa3] transition">
             Fact Check
-          </a>
-          <a href="#" className="hover:text-[#43ffa3] transition">
+          </Link>
+          <Link href="#" className="hover:text-[#43ffa3] transition">
             Contact Us
-          </a>
+          </Link>
         </nav>
         <div className="hidden md:block">
           <ConnectWallet />
