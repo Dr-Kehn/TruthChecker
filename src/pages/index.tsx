@@ -8,7 +8,7 @@ export default function Home() {
       <header className="flex items-center justify-between px-10 py-6">
         <div className="text-2xl font-bold">TruthCheck</div>
         <nav className="space-x-6 hidden md:flex">
-          <a href="#" className="text-[#43ffa3] font-medium">
+          <a href="/" className="text-[#43ffa3] font-medium">
             Home
           </a>
           <a href="#" className="hover:text-[#43ffa3] transition">
