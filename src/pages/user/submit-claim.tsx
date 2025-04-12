@@ -10,6 +10,7 @@ import { useAccount, useWriteContract } from "wagmi";
 import { abi } from "../../lib/constants";
 import { toast } from "react-toastify";
 import { FiExternalLink } from "react-icons/fi";
+import Image from "next/image";
 
 const SubmitClaim: React.FC = () => {
   const [content, setContent] = useState("");
@@ -145,7 +146,7 @@ const SubmitClaim: React.FC = () => {
                       </svg>
                     </>
                   ) : (
-                    <img
+                    <Image
                       src={typeof primary === "string" ? primary : primary.src}
                       alt="Submit"
                       className="h-14 w-13 flex cursor-pointer"

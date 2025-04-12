@@ -15,12 +15,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { start = '1', count = '10' } = req.query;
 
   try {
-    console.log("Fetching submissions from contract");    
+    const totalSubmissions = await client.readContract({
+      address: contractAddress!,
+      abi,
+      functionName: 'getTotalSubmissions',
+    });
+
+    const total = Number(totalSubmissions);
+    const startIndex = total - Number(start) + 1;
+    const fetchCount = Math.min(Number(count), startIndex);
+
     const result = await client.readContract({
       address: contractAddress!,
       abi,
       functionName: 'getSubmissions',
-      args: [BigInt(Number(start)), BigInt(Number(count))],
+      args: [BigInt(startIndex - fetchCount + 1), BigInt(fetchCount)],
     });
 
     const [ids, submitters, contents, trueVotes, falseVotes, finalVerdicts] = result as any[];
@@ -34,10 +43,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       finalVerdict: Number(finalVerdicts[i]),
     }));
 
+    // Reverse to get newest first
+    submissions.reverse();
+
     res.status(200).json(submissions);
   } catch (error: any) {
     console.error('Error fetching submissions:', error);
-    console.error(error.message);
     res.status(500).json({ error: 'Failed to fetch submissions', details: error.message });
   }
 }

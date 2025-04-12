@@ -38,7 +38,7 @@ const data = {
     },
     {
       title: "Explore Claims",
-      url: "#",
+      url: "/user/explore-claim",
       icon: () => <IoSearchOutline />,
     },
     {
