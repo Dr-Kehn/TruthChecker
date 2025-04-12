@@ -7,7 +7,6 @@ import { WagmiProvider } from "wagmi";
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 
 import { config } from "../wagmi";
-import ConnectWallet from "../components/WalletConnect";
 
 const client = new QueryClient();
 

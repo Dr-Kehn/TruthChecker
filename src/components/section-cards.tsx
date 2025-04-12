@@ -1,11 +1,8 @@
-import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-react";
-
-import { Badge } from "@/components/ui/badge";
 import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "../components/ui/card";
 import Image from "next/image";
 import blue from "@/assets/blue.svg";
 import red from "@/assets/red.svg";

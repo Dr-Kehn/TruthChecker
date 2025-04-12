@@ -1,12 +1,11 @@
-import { AppSidebar } from "@/components/app-sidebar";
-import { ChartAreaInteractive } from "@/components/chart-area-interactive";
-import { DataTable } from "@/components/data-table";
-import { SectionCards } from "@/components/section-cards";
-import { SiteHeader } from "@/components/site-header";
-import { Button } from "@/components/ui/button";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "../../components/app-sidebar";
+import { ChartAreaInteractive } from "../../components/chart-area-interactive";
+import { SectionCards } from "../../components/section-cards";
+import { SiteHeader } from "../../components/site-header";
+import { Button } from "../../components/ui/button";
+import { SidebarInset, SidebarProvider } from "../../components/ui/sidebar";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useAccount, useWriteContract } from "wagmi";
+import { useAccount } from "wagmi";
 
 export default function Page() {
   const { address } = useAccount();
@@ -23,7 +22,7 @@ export default function Page() {
     >
       <AppSidebar variant="inset" />
       <SidebarInset className=" p-0 m-0">
-        <SiteHeader />
+        <SiteHeader title="Dashboard" />
 
         {/* dashboard section */}
 
