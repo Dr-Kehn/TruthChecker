@@ -32,13 +32,13 @@ const data = {
       icon: () => <MdOutlineDashboard />,
     },
     {
-      title: "Instant Checks",
+      title: "Instant Check",
       url: "/user/submit-claim",
       icon: () => <LuFileUp />,
     },
     {
       title: "Explore Claims",
-      url: "#",
+      url: "/user/explore-claim",
       icon: () => <IoSearchOutline />,
     },
     {
@@ -69,7 +69,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5 hover:bg-[#202020]"
             >
-              <Link href="/user/dashboard">
+              <Link href="/">
                 <Image  src={logo} alt="logo"  width={150} height={150}/>
               </Link>
             </SidebarMenuButton>
