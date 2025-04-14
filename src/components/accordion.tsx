@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export const Accordion = () => {
   const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({
-    'accordion-collapse-body-1': true,
+    'accordion-collapse-body-1': false,
     'accordion-collapse-body-2': false,
     'accordion-collapse-body-3': false,
     'accordion-collapse-body-4': false,
@@ -197,7 +197,7 @@ export const Accordion = () => {
       <h2 id="accordion-collapse-heading-5">
         <button
           type="button"
-          className="accordion-button"
+          className="accordion-button rounded-b-xl"
           onClick={() => toggleItem("accordion-collapse-body-5")}
           aria-expanded={expandedItems["accordion-collapse-body-5"]}
           aria-controls="accordion-collapse-body-5"
